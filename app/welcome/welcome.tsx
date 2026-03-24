@@ -2,8 +2,11 @@ export function Welcome() {
 	return (
 		<main className="min-h-screen bg-black text-white overflow-hidden">
 			<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,0,0,0.16),transparent_38%)] pointer-events-none" />
-			<div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
-			<div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(0,0,0,0.65))] pointer-events-none" />
+			<div className="pointer-events-none absolute inset-0 overflow-hidden">
+	<div className="absolute inset-[-20%] animated-grid opacity-[0.06]" />
+	<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.55)_100%)]" />
+	<div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(0,0,0,0.72))]" />
+</div>
 
 			<div className="relative z-10 mx-auto max-w-7xl px-6 py-10">
 				<header className="flex items-center justify-between border-b border-white/10 pb-6">
