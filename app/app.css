@@ -187,3 +187,17 @@ body {
 		transform: scale(1.03);
 	}
 }
+
+.radar-bg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1400px;
+	height: 1400px;
+	transform: translate(-50%, -38%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.22;
+	filter: blur(0.5px);
+}
