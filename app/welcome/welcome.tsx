@@ -10,20 +10,33 @@ export function Welcome() {
 		<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.55)_100%)]" />
 		<div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(0,0,0,0.72))]" />
 	</div>
+	
+<div className="relative">
+	<div className="absolute -inset-8 bg-red-700/10 blur-3xl rounded-full" />
 
-			<div className="relative z-10 mx-auto max-w-7xl px-6 py-10">
-				<header className="flex items-center justify-between border-b border-white/10 pb-6">
-					<div className="flex items-center gap-4">
-						<img src="/redwing.png" className="h-10 w-10 rounded-md object-cover" alt="Redwing Labs logo" />
-						<div>
-							<p className="text-xs tracking-[0.3em] uppercase text-red-400">
-								Redwing Labs
-							</p>
-							<p className="text-xs text-white/50">
-								Defensive Cyber Operations
-							</p>
-						</div>
-					</div>
+	<div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] backdrop-blur">
+		<div className="radar-wrap">
+			<div className="radar-ring radar-ring-1" />
+			<div className="radar-ring radar-ring-2" />
+			<div className="radar-ring radar-ring-3" />
+			<div className="radar-ring radar-ring-4" />
+			<div className="radar-cross radar-cross-h" />
+			<div className="radar-cross radar-cross-v" />
+			<div className="radar-sweep" />
+			<div className="radar-glow" />
+		</div>
+
+		<div className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_bottom,transparent,transparent_50%,rgba(255,255,255,0.18)_50%,transparent_51%)] bg-[length:100%_6px] pointer-events-none" />
+
+		<div className="relative z-10 flex h-full min-h-[520px] items-center justify-center p-8">
+			<img
+				src="/redwing.png"
+				className="w-full max-w-[540px] object-contain drop-shadow-[0_0_30px_rgba(255,0,0,0.15)]"
+				alt="Redwing Labs"
+			/>
+		</div>
+	</div>
+</div>
 
 					<nav className="hidden md:flex gap-6 text-sm text-white/70">
 						<a href="#mission" className="hover:text-white transition">Mission</a>
