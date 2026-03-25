@@ -94,15 +94,17 @@ export function Welcome() {
 					</div>
 
 					{/* LOGO PANEL */}
-					<div className="relative">
-						<div className="absolute -inset-8 bg-red-700/10 blur-3xl rounded-full" />
+					<div className="relative flex justify-center">
+	<div className="absolute -inset-10 bg-red-700/10 blur-3xl rounded-full" />
 
-						<div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] backdrop-blur">
-							<div className="relative z-10 flex items-center justify-center p-8">
-								<img src="/redwing.png" className="w-full max-w-[520px] object-contain" />
-							</div>
-						</div>
-					</div>
+	<div className="relative inline-block rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur p-4">
+		<img
+			src="/redwing.png"
+			className="w-[420px] max-w-full object-contain"
+			alt="Redwing Labs"
+		/>
+	</div>
+</div>
 				</section>
 
 				{/* MISSION */}
