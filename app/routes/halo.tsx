@@ -229,12 +229,11 @@ export default function HaloPage() {
 
 					<div className="mt-10 grid gap-6 md:grid-cols-2">
 						<div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
-							<h3 className="text-xl font-semibold">Current infrastructure</h3>
+							<h3 className="text-xl font-semibold">Current / Needed infrastructure</h3>
 							<ul className="mt-4 space-y-3 text-sm text-white/75">
-								<li>Dell PowerEdge R740 — 32GB RAM</li>
-								<li>Dell R360 — 32GB DDR5</li>
-								<li>Dell T440 — pending memory upgrade</li>
-								<li>Workstation — Intel i9-14900K / RTX 4080 Super</li>
+								<li>Previous Gen Dell PowerEdge Servers</li>
+								<li>One Dell R360 — 32GB DDR5</li>
+								<li>AI Training Lab Still Needed</li>
 							</ul>
 						</div>
 
