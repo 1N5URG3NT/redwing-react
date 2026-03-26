@@ -74,7 +74,8 @@ export function Welcome() {
 						<p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
 							Redwing Labs is developing Project HALO to support the detection, documentation,
 							and responsible reporting of Child Sexual Abuse Material online, while minimising
-							the need for humans to directly view harmful content.
+							the need for humans to directly view harmful content. The system is designed so that
+							harmful material is not stored, retained, or directly viewed within the operational workflow.
 						</p>
 
 						<div className="mt-10 flex flex-wrap gap-4">
