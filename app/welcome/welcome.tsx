@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export function Welcome() {
 	return (
 		<main className="relative min-h-screen bg-black text-white overflow-hidden">
@@ -6,7 +8,6 @@ export function Welcome() {
 
 			<div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,0,0,0.16),transparent_38%)] pointer-events-none" />
 
-			{/* RADAR BACKGROUND */}
 			<div className="pointer-events-none absolute inset-0 overflow-hidden">
 				<div className="radar-bg">
 					<div className="radar-ring radar-ring-1" />
@@ -20,7 +21,6 @@ export function Welcome() {
 				</div>
 			</div>
 
-			{/* GRID */}
 			<div className="pointer-events-none absolute inset-0 overflow-hidden">
 				<div className="absolute inset-[-20%] animated-grid opacity-[0.04]" />
 				<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.55)_100%)]" />
@@ -28,11 +28,13 @@ export function Welcome() {
 			</div>
 
 			<div className="relative z-10 mx-auto max-w-7xl px-6 py-10">
-
-				{/* HEADER */}
 				<header className="flex items-center justify-between border-b border-white/10 pb-6">
 					<div className="flex items-center gap-4">
-						<img src="/redwing.png" className="h-10 w-10 rounded-md object-cover" />
+						<img
+							src="/redwing.png"
+							className="h-10 w-10 rounded-md object-cover"
+							alt="Redwing Labs logo"
+						/>
 						<div>
 							<p className="text-xs tracking-[0.3em] uppercase text-red-400">
 								Redwing Labs
@@ -44,107 +46,233 @@ export function Welcome() {
 					</div>
 
 					<nav className="hidden md:flex gap-6 text-sm text-white/70">
-						<a href="#mission" className="hover:text-white">Mission</a>
-						<a href="#halo" className="hover:text-white">HALO</a>
-						<a href="#support" className="hover:text-white">Support</a>
-						<a href="#contact" className="hover:text-white">Contact</a>
+						<a href="#mission" className="hover:text-white transition">
+							Mission
+						</a>
+						<Link to="/halo" className="hover:text-white transition">
+							Project HALO
+						</Link>
+						<a href="#support" className="hover:text-white transition">
+							Support
+						</a>
+						<a href="mailto:contact@redwinglabs.net" className="hover:text-white transition">
+							Contact
+						</a>
 					</nav>
 				</header>
 
-				{/* HERO */}
 				<section className="grid lg:grid-cols-[1.05fr_0.95fr] gap-16 py-20 items-center">
 					<div>
 						<p className="text-xs uppercase tracking-[0.32em] text-red-500 mb-6">
-							ACTIVE DEFENSIVE INITIATIVE
+							ACTIVE CHILD SAFETY INITIATIVE
 						</p>
 
 						<h1 className="text-5xl md:text-6xl font-semibold leading-tight">
-							Detect. Disrupt. Report.
+							Technology built to protect children and reduce operator harm.
 						</h1>
 
-						<p className="mt-6 text-lg text-white/70 max-w-xl">
-							We build operational tooling to identify and act against child exploitation
-							networks, focusing on detection workflows, evidence integrity, and escalation.
+						<p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
+							Redwing Labs is developing Project HALO to support the detection, documentation,
+							and responsible reporting of Child Sexual Abuse Material online, while minimising
+							the need for humans to directly view harmful content.
 						</p>
 
-						<div className="mt-10 flex gap-4">
-							<a href="#halo" className="px-6 py-3 bg-red-700 rounded-xl font-semibold hover:bg-red-600">
-								Project HALO
-							</a>
-							<a href="#contact" className="px-6 py-3 border border-white/20 rounded-xl hover:bg-white hover:text-black">
+						<div className="mt-10 flex flex-wrap gap-4">
+							<Link
+								to="/halo"
+								className="rounded-xl bg-red-700 px-6 py-3 font-semibold transition hover:bg-red-600"
+							>
+								View Project HALO
+							</Link>
+
+							<a
+								href="mailto:contact@redwinglabs.net"
+								className="rounded-xl border border-white/20 px-6 py-3 font-semibold transition hover:bg-white hover:text-black"
+							>
 								Contact
 							</a>
 						</div>
 
 						<div className="mt-10 grid gap-4 sm:grid-cols-2">
 							<div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
-								<p className="text-xs uppercase text-red-400">Operational Focus</p>
-								<p className="text-sm text-white/70 mt-3">
-									Detection systems, secure evidence handling, and reporting automation.
+								<p className="text-xs uppercase tracking-[0.22em] text-red-400">
+									Child Protection
+								</p>
+								<p className="mt-3 text-sm leading-7 text-white/70">
+									Focused on improving structured detection and escalation capability in an area
+									where technical gaps still exist.
 								</p>
 							</div>
 
 							<div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
-								<p className="text-xs uppercase text-red-400">Posture</p>
-								<p className="text-sm text-white/70 mt-3">
-									Mission-led, unfunded, and built for real defensive action.
+								<p className="text-xs uppercase tracking-[0.22em] text-red-400">
+									Operator Protection
+								</p>
+								<p className="mt-3 text-sm leading-7 text-white/70">
+									Designed to reduce or remove the need for investigators and analysts to directly
+									view harmful material.
 								</p>
 							</div>
 						</div>
 					</div>
 
-					{/* LOGO PANEL */}
-	<div className="relative">
-						<div className="absolute -inset-8 bg-red-700/10 blur-3xl rounded-full" />
-						<div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] backdrop-blur">
-							<div className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_bottom,transparent,transparent_50%,rgba(255,255,255,0.18)_50%,transparent_51%)] bg-[length:100%_6px] pointer-events-none" />
+					<div className="relative flex justify-center">
+						<div className="absolute -inset-10 rounded-full bg-red-700/10 blur-3xl" />
+
+						<div className="relative inline-block rounded-2xl border border-white/10 bg-white/[0.04] p-4 backdrop-blur">
 							<img
 								src="/redwing.png"
-								className="relative z-10 w-full object-cover"
+								className="w-[420px] max-w-full object-contain"
 								alt="Redwing Labs"
 							/>
 						</div>
 					</div>
 				</section>
 
-				{/* MISSION */}
 				<section id="mission" className="border-t border-white/10 py-16">
-					<h2 className="text-3xl font-semibold mb-4">A blade for the defenseless.</h2>
-					<p className="text-white/70 max-w-3xl">
-						Redwing Labs develops focused systems for detection, documentation, and reporting
-						of exploitative content, reducing the gap between discovery and action.
-					</p>
+					<div className="max-w-4xl">
+						<p className="mb-4 text-xs uppercase tracking-[0.3em] text-red-400">
+							Mission
+						</p>
+						<h2 className="mb-5 text-3xl font-semibold">
+							A blade for the defenseless.
+						</h2>
+						<p className="text-lg leading-8 text-white/70">
+							Redwing Labs exists to build focused technical capability that supports child safety
+							online. Project HALO is intended to reduce the distance between detection and lawful
+							reporting while also protecting the people doing this work from avoidable psychological harm.
+						</p>
+					</div>
 				</section>
 
-				{/* HALO */}
-				<section id="halo" className="border-t border-white/10 py-16">
-					<h2 className="text-3xl font-semibold mb-6">Project HALO</h2>
+				<section className="border-t border-white/10 py-16">
+					<div className="max-w-4xl">
+						<p className="mb-4 text-xs uppercase tracking-[0.3em] text-red-400">
+							Approach
+						</p>
+						<h2 className="mb-5 text-3xl font-semibold">
+							Serious technology for a serious problem.
+						</h2>
+						<p className="text-base leading-8 text-white/75">
+							The system is being designed around perceptual hashing, structured logging, and
+							automated reporting workflows. The goal is to identify and escalate harmful material
+							without normalising a workflow in which humans must repeatedly view it.
+						</p>
+					</div>
 
-					<div className="grid md:grid-cols-3 gap-6">
-						{["Detection Engine", "Secure Logging", "Automated Reporting"].map((t) => (
-							<div key={t} className="rounded-2xl border border-white/10 p-6">
-								<h3 className="font-semibold">{t}</h3>
+					<div className="mt-10 grid gap-6 md:grid-cols-3">
+						{[
+							{
+								title: "Detection",
+								text: "Hash-based identification workflows designed to support recognition of known harmful material.",
+							},
+							{
+								title: "Documentation",
+								text: "Structured logging and traceable system outputs designed for review and escalation.",
+							},
+							{
+								title: "Escalation",
+								text: "Automated reporting pathways intended to reduce manual handling and response friction.",
+							},
+						].map((item) => (
+							<div
+								key={item.title}
+								className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-red-600/40 hover:bg-red-950/10"
+							>
+								<div className="mb-4 h-[2px] w-12 bg-red-500/70 transition group-hover:w-20" />
+								<h3 className="text-lg font-semibold">{item.title}</h3>
+								<p className="mt-3 text-sm leading-7 text-white/70">{item.text}</p>
 							</div>
 						))}
 					</div>
 				</section>
 
-				{/* SUPPORT */}
-				<section id="support" className="border-t border-white/10 py-16">
-					<h2 className="text-3xl font-semibold mb-4">Support</h2>
-					<div className="flex items-center gap-4">
-						<img src="/substation33.png" className="h-14 bg-white p-2 rounded" />
-						<p className="text-white/70">Substation 33</p>
+				<section className="border-t border-white/10 py-16">
+					<div className="max-w-4xl">
+						<p className="mb-4 text-xs uppercase tracking-[0.3em] text-red-400">
+							Safety Design
+						</p>
+						<h2 className="mb-5 text-3xl font-semibold">
+							No direct viewing. No long-term storage.
+						</h2>
+					</div>
+
+					<div className="grid gap-4 md:grid-cols-2">
+						{[
+							"The project is intended to minimise or remove the need for direct human viewing of harmful material.",
+							"The operating model is centered on hashes, metadata, and structured reporting rather than media retention.",
+							"Harmful material is not intended to be stored long-term within the system workflow.",
+							"The design prioritises legal compliance, ethical restraint, and operator wellbeing.",
+						].map((line) => (
+							<div
+								key={line}
+								className="rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm leading-7 text-white/75"
+							>
+								{line}
+							</div>
+						))}
 					</div>
 				</section>
 
-				{/* CONTACT */}
-				<section id="contact" className="border-t border-white/10 py-16">
-					<a href="mailto:k.sspalmer@proton.me" className="px-6 py-3 bg-red-700 rounded-xl">
-						k.sspalmer@proton.me
-					</a>
+				<section id="support" className="border-t border-white/10 py-16">
+					<p className="mb-4 text-xs uppercase tracking-[0.3em] text-red-400">
+						Support
+					</p>
+					<h2 className="mb-4 text-3xl font-semibold">
+						Built with backing from people who believe the mission matters.
+					</h2>
+					<p className="mb-8 max-w-2xl text-white/70 leading-8">
+						Redwing Labs is currently an unfunded initiative developing early-stage capability with
+						the support of community backing, donated equipment, and mission-aligned assistance.
+					</p>
+
+					<div className="inline-flex items-center gap-5 rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+						<img
+							src="/substation33.png"
+							className="h-16 rounded bg-white p-2"
+							alt="Substation 33"
+						/>
+						<div>
+							<p className="font-semibold">Substation 33</p>
+							<p className="text-sm text-white/50">
+								Equipment and infrastructure support
+							</p>
+						</div>
+					</div>
 				</section>
 
+				<section className="border-t border-white/10 py-16">
+					<p className="mb-4 text-xs uppercase tracking-[0.3em] text-red-400">
+						Contact
+					</p>
+					<h2 className="mb-4 text-3xl font-semibold">
+						Support, collaboration, or direct contact.
+					</h2>
+					<p className="mb-8 max-w-2xl text-white/70 leading-8">
+						For sponsorship, partnership, or mission-aligned support, contact Redwing Labs directly.
+					</p>
+
+					<div className="flex flex-wrap gap-4">
+						<a
+							href="mailto:contact@redwinglabs.net"
+							className="inline-block rounded-xl bg-red-700 px-6 py-4 font-semibold transition hover:bg-red-600"
+						>
+							contact@redwinglabs.net
+						</a>
+
+						<Link
+							to="/halo"
+							className="inline-block rounded-xl border border-white/20 px-6 py-4 font-semibold transition hover:bg-white hover:text-black"
+						>
+							Read Project HALO
+						</Link>
+					</div>
+				</section>
+
+				<footer className="flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/35 md:flex-row md:items-center md:justify-between">
+					<p>Redwing Labs — Defensive Cyber Operations</p>
+					<p>Child safety. Operator protection. Responsible escalation.</p>
+				</footer>
 			</div>
 		</main>
 	);
