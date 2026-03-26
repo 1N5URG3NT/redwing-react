@@ -116,13 +116,13 @@ export function Welcome() {
 						</div>
 					</div>
 
-					<div className="relative flex justify-center">
-						<div className="absolute -inset-10 rounded-full bg-red-700/10 blur-3xl" />
-
-						<div className="relative inline-block rounded-2xl border border-white/10 bg-white/[0.04] p-4 backdrop-blur">
+						<div className="relative">
+						<div className="absolute -inset-8 bg-red-700/10 blur-3xl rounded-full" />
+						<div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] backdrop-blur">
+							<div className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_bottom,transparent,transparent_50%,rgba(255,255,255,0.18)_50%,transparent_51%)] bg-[length:100%_6px] pointer-events-none" />
 							<img
 								src="/redwing.png"
-								className="w-[420px] max-w-full object-contain"
+								className="relative z-10 w-full object-cover"
 								alt="Redwing Labs"
 							/>
 						</div>
